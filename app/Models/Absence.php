@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Absence extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'cne';
+    public $incrementing = false;
+
+    protected $fillable = [
+        'cne',
+        'semaine',
+        'nbr_abs',
+    ];
+
 }

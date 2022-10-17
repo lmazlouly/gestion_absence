@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Eleve extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'cne';
+    public $incrementing = false;
     protected $fillable = [
         'cne',
         'nom',

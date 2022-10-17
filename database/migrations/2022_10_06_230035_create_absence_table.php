@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('absences', function (Blueprint $table) {
             $table->integer('semaine');
             $table->string('cne');
-            $table->foreign('cne')->references('cne')->on('eleve');
+            $table->foreign('cne')->references('cne')->on('eleves');
             $table->string('nbr_abs');
             $table->primary(['semaine', 'cne']);
             $table->timestamps();
